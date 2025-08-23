@@ -58,7 +58,11 @@ for message in st.session_state['message_history']:
 
 
 ############################################ Q&A ############################################
-config = {'configurable':{'thread_id':st.session_state['thread_id']}}
+config = {
+    'configurable':{'thread_id':st.session_state['thread_id']},
+    'metadate':{'thread_id':st.session_state['thread_id']},
+    'run_name':'chatbot_run'
+    }
 user_input = st.chat_input("Type here:") 
 
 if user_input:
